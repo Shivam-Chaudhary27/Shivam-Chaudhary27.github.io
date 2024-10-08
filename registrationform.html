@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        background-color: rgb(66, 64, 62);
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140vh;
+        padding: 20px;
+      }
+
+      .form-container {
+        border: 2px solid;
+        width: 100%;
+        max-width: 600px; /* Maximum width */
+        background-color: #772626;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: white;
+      }
+
+      label {
+        color: white;
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      select,
+      input[type="file"] {
+        width: 88%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: brown;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: darkred;
+      }
+
+      @media (max-width: 768px) {
+        .form-container {
+          width: 100%;
+          padding: 15px;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="border: 4px solid">
+      <div style="background-color: brown; padding: 2px; margin-bottom: 5px">
+        <h2 align="center">Registration Form</h2>
+      </div>
+      <div class="container">
+        <div class="form-container">
+          <form style="text-align: center">
+            <h2>Sign Up</h2>
+            <label>First Name</label>
+            <input type="text" required />
+            <label>Contact No.</label>
+            <input type="number" required />
+            <label>Email</label>
+            <input type="email" required />
+
+            <label>Subjects:</label>
+            <input type="checkbox" />C++ <input type="checkbox" />C
+            <input type="checkbox" />Java <input type="checkbox" />Python
+            <br /><br />
+
+            <label>Gender</label>
+            <input type="radio" name="gen" required />Male
+            <input type="radio" name="gen" required />Female <br /><br />
+
+            <label>Country</label>
+            <select required>
+              <option value="" selected disabled>--Select Country--</option>
+              <option>India</option>
+              <option>Australia</option>
+              <option>Japan</option>
+              <option>Germany</option>
+            </select>
+            <br /><br />
+
+            <label>Upload File</label>
+            <input type="file" />
+            <br /><br />
+
+            <input type="submit" />
+            <input type="reset" />
+            <br /><br />
+            <progress value="50" max="100"></progress>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
